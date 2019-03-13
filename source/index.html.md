@@ -33,7 +33,7 @@ Ask the API for what my current Business Account is based on host origin.
 
 ```plaintext
 GET /api/business_accounts/current
-Origin: http://pollich.ca
+Origin: http://douglas.info
 Host: example.org
 Cookie: 
 ```
@@ -50,14 +50,11 @@ None known.
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;1bc8684b45aed3a046fafb2c373de3b1&quot;
+ETag: W/&quot;75e89d56b85731b1bb84008c0d89bbbf&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 3948c301-b5aa-4293-bb34-b9c8804d6923
-X-Runtime: 0.009059
-Content-Length: 1375
+X-Request-Id: 0b7aa12a-1450-40d1-a95d-dde1d0146830
+X-Runtime: 0.011847
+Content-Length: 1760
 200 OK
 ```
 
@@ -65,19 +62,23 @@ Content-Length: 1375
 ```json
 {
   "business_account": {
-    "id": "578ca6ff-1a66-4645-acf4-ffdb54e17602",
-    "name": "Hirthe-Daugherty",
-    "slug": "hirthe-daugherty",
+    "id": "e0851947-389a-4618-9a85-90203984c5f2",
+    "name": "Welch, Waters and O'Reilly",
+    "slug": "welch-waters-and-o-reilly",
     "business_type": "fitness_studio",
     "account_type": null,
     "requires_waiver": true,
     "waiver_text": null,
     "waiver_url": null,
+    "default_time_zone": "America/Los_Angeles",
+    "schedule_release_type": "monthly",
+    "schedule_release_day": 20,
+    "schedule_release_time": "12:00am",
     "locations": [
       {
-        "id": "9961e230-d2bd-4bca-b970-bdc52d72fd25",
-        "name": "Walker-Steuber",
-        "slug": "walker-steuber",
+        "id": "c461dee9-e26d-412a-85fa-655ee126b830",
+        "name": "Mueller-Dare",
+        "slug": "mueller-dare",
         "address1": null,
         "address2": null,
         "city": null,
@@ -88,14 +89,16 @@ Content-Length: 1375
         "latitude": null,
         "longitude": null,
         "time_zone": "America/Los_Angeles",
+        "reservations_open_until": "2019-03-31T23:59:00.000-07:00",
+        "next_schedule_release_at": "2019-03-20T00:00:00.000-07:00",
         "allow_guest_only_reservations": true,
         "show_waitlist_capacity": true,
         "default_schedule_display_period": null
       },
       {
-        "id": "bcb4965f-4656-4464-907a-1304c0393829",
-        "name": "Prosacco-Kilback",
-        "slug": "prosacco-kilback",
+        "id": "1d7c6a9e-b460-4bb9-a155-67bcdbe626d9",
+        "name": "Schaden and Sons",
+        "slug": "schaden-and-sons",
         "address1": null,
         "address2": null,
         "city": null,
@@ -106,6 +109,8 @@ Content-Length: 1375
         "latitude": null,
         "longitude": null,
         "time_zone": "America/Los_Angeles",
+        "reservations_open_until": "2019-03-31T23:59:00.000-07:00",
+        "next_schedule_release_at": "2019-03-20T00:00:00.000-07:00",
         "allow_guest_only_reservations": true,
         "show_waitlist_capacity": true,
         "default_schedule_display_period": null
@@ -113,7 +118,7 @@ Content-Length: 1375
     ],
     "roles": [
       {
-        "id": "f228aa01-2529-4715-8be3-cc4178e87877",
+        "id": "c46b65e3-8eee-4b53-bd83-9bcc86078577",
         "name": "Super Admin",
         "slug": "super-admin",
         "permissions": [
@@ -126,7 +131,7 @@ Content-Length: 1375
         ]
       },
       {
-        "id": "da93a4e4-eb49-4a14-8c10-d7ffa336a6f6",
+        "id": "296ec875-6009-43c5-9986-10dd359191e7",
         "name": "Instructor",
         "slug": "instructor",
         "permissions": [
@@ -155,7 +160,7 @@ Anyone who works for a Business Account. Most commonly, you'll want to get a lis
 
 ```plaintext
 GET /api/business_staffs?roles[]=instructor
-Origin: http://schaefer-medhurst.mgrapp.com
+Origin: http://feil-heaney.mgrapp.com
 Host: example.org
 Cookie: 
 ```
@@ -183,14 +188,11 @@ roles: [&quot;instructor&quot;]
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;fe5c0d8a26f91685386772a12be45f65&quot;
+ETag: W/&quot;6fbdedfa35f5a2da624126e597c4f64c&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 2089fe29-b4ff-4343-9411-c3a5ab4e06bd
-X-Runtime: 0.045134
-Content-Length: 1093
+X-Request-Id: 0de88efd-1488-4ef5-ae0c-868144735a69
+X-Runtime: 0.043144
+Content-Length: 1107
 200 OK
 ```
 
@@ -199,25 +201,22 @@ Content-Length: 1093
 {
   "business_staffs": [
     {
-      "id": "5cad7782-55da-4559-bf2f-83cc48d68dce",
-      "email": "betsey@toygraham.biz",
-      "slug": "elly-cassin",
-      "first_name": "Elly",
-      "last_name": "Cassin",
+      "id": "58bd5921-c8de-433f-8bf5-5ac14523de2a",
+      "email": "leila.lebsack@harveylabadie.info",
+      "slug": "jule-torphy",
+      "first_name": "Jule",
+      "last_name": "Torphy",
       "description": null,
       "hire_date": null,
       "phone": null,
+      "is_kiosk": false,
       "profile_image": null,
       "roles": [
         {
-          "id": "1e3b5eb3-8c66-439e-bd19-6600a71d7238",
+          "id": "9482734c-4dc6-4ef4-bce3-e377883ee644",
+          "role_id": "78373416-ae9e-4b3e-8277-18a095af39cf",
           "name": "Instructor",
-          "slug": "instructor",
-          "permissions": [
-            "refunds",
-            "edit-user-profile",
-            "schedule-adjustment"
-          ]
+          "slug": "instructor"
         }
       ],
       "permissions": [
@@ -233,25 +232,22 @@ Content-Length: 1093
       ]
     },
     {
-      "id": "a0798e3b-6119-41b4-83a0-fea0a98f8899",
-      "email": "terrilyn@maggio.com",
-      "slug": "elenor-stracke",
-      "first_name": "Elenor",
-      "last_name": "Stracke",
+      "id": "4753962b-73d1-455f-b2a1-2d5b618bb526",
+      "email": "belle@wizamurazik.co.uk",
+      "slug": "malena-parisian",
+      "first_name": "Malena",
+      "last_name": "Parisian",
       "description": null,
       "hire_date": null,
       "phone": null,
+      "is_kiosk": false,
       "profile_image": null,
       "roles": [
         {
-          "id": "1e3b5eb3-8c66-439e-bd19-6600a71d7238",
+          "id": "01f323e3-a4c4-4fe2-b908-6844c23d54d6",
+          "role_id": "78373416-ae9e-4b3e-8277-18a095af39cf",
           "name": "Instructor",
-          "slug": "instructor",
-          "permissions": [
-            "refunds",
-            "edit-user-profile",
-            "schedule-adjustment"
-          ]
+          "slug": "instructor"
         }
       ],
       "permissions": [
@@ -289,7 +285,7 @@ Content-Length: 1093
 
 ```plaintext
 GET /api/business_staffs
-Origin: http://lemke-inc.mgrapp.com
+Origin: http://herman-and-sons.mgrapp.com
 Host: example.org
 Cookie: 
 ```
@@ -313,14 +309,11 @@ Cookie:
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;bd7141e975676f8aca261e513b3d017b&quot;
+ETag: W/&quot;d7546f04025d4f116dc03cd70e26278c&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: d4aec4c7-5a6d-407f-810b-1adb5b656c6a
-X-Runtime: 0.077752
-Content-Length: 1669
+X-Request-Id: 94c73115-b72c-49e2-ad0d-6f1e0ca81b38
+X-Runtime: 0.042564
+Content-Length: 1686
 200 OK
 ```
 
@@ -329,14 +322,15 @@ Content-Length: 1669
 {
   "business_staffs": [
     {
-      "id": "30a46905-c16b-47b5-9b4b-6f3da85615a0",
-      "email": "tomoko.reichert@hilll.co.uk",
-      "slug": "lorina-legros",
-      "first_name": "Lorina",
-      "last_name": "Legros",
+      "id": "32ff21a5-4659-4e5a-81ab-057a05eacbc5",
+      "email": "janella@conroy.info",
+      "slug": "adelle-considine",
+      "first_name": "Adelle",
+      "last_name": "Considine",
       "description": null,
       "hire_date": null,
       "phone": null,
+      "is_kiosk": false,
       "profile_image": null,
       "roles": [
 
@@ -352,14 +346,15 @@ Content-Length: 1669
       ]
     },
     {
-      "id": "1a8d766a-3bae-4fa8-9481-37bb82820775",
-      "email": "jammie@simonis.biz",
-      "slug": "etha-mertz",
-      "first_name": "Etha",
-      "last_name": "Mertz",
+      "id": "f7c2cf5a-eb0f-4be3-8cc9-f45d3e489afd",
+      "email": "nakesha@purdy.co.uk",
+      "slug": "sharolyn-wehner",
+      "first_name": "Sharolyn",
+      "last_name": "Wehner",
       "description": null,
       "hire_date": null,
       "phone": null,
+      "is_kiosk": false,
       "profile_image": null,
       "roles": [
 
@@ -375,25 +370,22 @@ Content-Length: 1669
       ]
     },
     {
-      "id": "d54a4547-d299-427b-b8e6-001e5ca6a4fb",
-      "email": "kami@wisozkoberbrunner.us",
-      "slug": "deneen-sanford",
-      "first_name": "Deneen",
-      "last_name": "Sanford",
+      "id": "7d829c5a-93f2-4160-bc7c-717ea906ba4e",
+      "email": "marvin@zboncak.name",
+      "slug": "lakita-jerde",
+      "first_name": "Lakita",
+      "last_name": "Jerde",
       "description": null,
       "hire_date": null,
       "phone": null,
+      "is_kiosk": false,
       "profile_image": null,
       "roles": [
         {
-          "id": "31652f96-0f71-48fd-8d32-cadab68150da",
+          "id": "229cdfb2-ce82-4080-a883-507069f5439d",
+          "role_id": "4d2f2838-bceb-43c6-9787-47e0df6593e8",
           "name": "Instructor",
-          "slug": "instructor",
-          "permissions": [
-            "refunds",
-            "edit-user-profile",
-            "schedule-adjustment"
-          ]
+          "slug": "instructor"
         }
       ],
       "permissions": [
@@ -409,25 +401,22 @@ Content-Length: 1669
       ]
     },
     {
-      "id": "561be62b-3e30-482d-8ac9-74cd9eb36b20",
-      "email": "edwina_welch@daniel.co.uk",
-      "slug": "gerda-prosacco",
-      "first_name": "Gerda",
-      "last_name": "Prosacco",
+      "id": "2d8c1a0d-bcc1-43c9-ac61-f8694e9582f2",
+      "email": "shante@jacobson.biz",
+      "slug": "thelma-huel",
+      "first_name": "Thelma",
+      "last_name": "Huel",
       "description": null,
       "hire_date": null,
       "phone": null,
+      "is_kiosk": false,
       "profile_image": null,
       "roles": [
         {
-          "id": "31652f96-0f71-48fd-8d32-cadab68150da",
+          "id": "887b1e62-937d-420a-93c0-bae41634e93d",
+          "role_id": "4d2f2838-bceb-43c6-9787-47e0df6593e8",
           "name": "Instructor",
-          "slug": "instructor",
-          "permissions": [
-            "refunds",
-            "edit-user-profile",
-            "schedule-adjustment"
-          ]
+          "slug": "instructor"
         }
       ],
       "permissions": [
@@ -469,8 +458,8 @@ Can be redeemed for cash (account balance) or packages
 
 ```plaintext
 POST /api/gift_cards/redeem
-Origin: http://raynor-pollich.mgrapp.com
-Authorization: Bearer 88e29bfd-2e61-4e51-95ad-92dc34582273
+Origin: http://crona-ryan.mgrapp.com
+Authorization: Bearer e3fe5e56-66a2-42e1-9cdc-d41c18528540
 Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Cookie: 
@@ -482,7 +471,7 @@ Cookie:
 
 
 ```json
-code=C50CF1DC
+code=5A0B81D7
 ```
 
 
@@ -496,14 +485,11 @@ code=C50CF1DC
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;97e4534082d6c4d37fe12734d56ac180&quot;
+ETag: W/&quot;c294096f0c195384bbb4b5d72d6e7f90&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 94d51d73-f5ae-4b39-a801-97cd05c5a29b
-X-Runtime: 0.064949
-Content-Length: 1162
+X-Request-Id: 57c7cf27-f5f6-4722-a041-17c30134743c
+X-Runtime: 0.059344
+Content-Length: 1291
 201 Created
 ```
 
@@ -511,25 +497,25 @@ Content-Length: 1162
 ```json
 {
   "gift_card_instance": {
-    "id": "0faf9cd8-20b0-4dd6-a439-de4d7fc8fe28",
+    "id": "976763aa-5e20-48a2-bb71-e11fc13abcef",
     "gift_card_type": "cash",
-    "amount": "14.0",
-    "code": "C50CF1DC",
+    "amount": "22.0",
+    "code": "5A0B81D7",
     "num_sessions": 0,
-    "created_at": "2018-12-30T17:52:18.010Z",
-    "redeemed_at": "2018-12-30T17:52:18.031Z",
+    "created_at": "2019-03-13T18:33:01.817Z",
+    "redeemed_at": "2019-03-13T18:33:01.849Z",
     "redeemer": {
-      "email": "callie@fay.ca"
+      "email": "loreta_thiel@toybreitenberg.info"
     }
   },
   "transaction": {
-    "id": "1d3111a3-0577-4c6b-a69e-54bcda616abc",
-    "created_at": "2018-12-30T17:52:18.061Z",
+    "id": "4912620c-6c14-415d-a90b-973fcd52085e",
+    "created_at": "2019-03-13T18:33:01.860Z",
     "state": "complete",
-    "amount": "-14.0",
+    "amount": "-22.0",
     "fail_message": null,
     "process_after": null,
-    "processed_at": "2018-12-30T17:52:18.070Z",
+    "processed_at": "2019-03-13T18:33:01.872Z",
     "payment_type": "account_balance",
     "description": null,
     "payment_source_invalid": false,
@@ -541,7 +527,7 @@ Content-Length: 1162
       "exp_month": null,
       "exp_year": null,
       "last4": null,
-      "balance": "114.0",
+      "balance": "122.0",
       "is_default": null
     },
     "transactable": null,
@@ -550,13 +536,13 @@ Content-Length: 1162
   },
   "package_instance": null,
   "user_profile": {
-    "id": "5a112173-6a1d-4399-a7ee-e2708745339d",
-    "account_balance": "114.0",
+    "id": "2b8917a8-74f1-4750-9f05-739717179920",
+    "account_balance": "122.0",
     "signed_waiver_at": null,
-    "created_at": "2018-12-30T17:52:18.020Z",
-    "email": "callie@fay.ca",
-    "first_name": "Marlen",
-    "last_name": "Quigley",
+    "created_at": "2019-03-13T18:33:01.828Z",
+    "email": "loreta_thiel@toybreitenberg.info",
+    "first_name": "Brady",
+    "last_name": "Deckow",
     "address1": null,
     "address2": null,
     "city": null,
@@ -564,7 +550,10 @@ Content-Length: 1162
     "zip_code": null,
     "phone": null,
     "dob": null,
-    "member_start_date": "2018-12-30"
+    "member_start_date": "2019-03-13",
+    "password_reset_required": false,
+    "emergency_contact_name": null,
+    "emergency_contact_phone": null
   }
 }
 ```
@@ -583,8 +572,8 @@ Specific instances of a class that a user can sign up for
 #### Endpoint
 
 ```plaintext
-GET /api/offerings?time_zone_offset=420&amp;location_id=a3c98b38-0d6c-472d-887d-d525801eadb1
-Origin: http://abernathy-llc.mgrapp.com
+GET /api/offerings?time_zone_offset=420&amp;location_id=db360552-8021-4984-8740-2fcc0fc59bd8
+Origin: http://bernier-hayes.mgrapp.com
 Host: example.org
 Cookie: 
 ```
@@ -596,7 +585,7 @@ Cookie:
 
 ```json
 time_zone_offset: 420
-location_id: a3c98b38-0d6c-472d-887d-d525801eadb1
+location_id: db360552-8021-4984-8740-2fcc0fc59bd8
 ```
 
 
@@ -617,14 +606,11 @@ location_id: a3c98b38-0d6c-472d-887d-d525801eadb1
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;fefab9b76b7922c755b95a8464e4b271&quot;
+ETag: W/&quot;54e67b5f18ab51df80032744ffb2e4cd&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 5b19ff72-c9e3-4813-86a0-6fca3cf61fc4
-X-Runtime: 0.012589
-Content-Length: 4674
+X-Request-Id: 532c77f8-9167-4a9c-bb04-854bdd2e7e1e
+X-Runtime: 0.012841
+Content-Length: 4600
 200 OK
 ```
 
@@ -633,11 +619,12 @@ Content-Length: 4674
 {
   "offerings": [
     {
-      "id": "0ed1d2bb-a20e-4686-8522-b44a65060313",
-      "name": "Melting Sheep fa140bb7",
-      "resource_slug": "melting-sheep-fa140bb7",
-      "description": "When the rennet is added, curds are formed taste and texture in all colours but poets have been mysteriously silent on the subject of cheese - tongue in cheek garlic cheese biscuits the milky way of blessed are the cheesemakers raw milk is unpasteurized - tongue in cheek they can also age quite well in ripening cellars where.",
-      "resource_type": null,
+      "id": "3daec2af-c044-49fa-8a6e-d27a58cc213e",
+      "name": "Dutch Goats 0c6dc4f2",
+      "resource_id": "e145a5b0-471a-48f3-9284-4661f72072cf",
+      "resource_slug": "dutch-goats-0c6dc4f2",
+      "recurrence_id": null,
+      "state": "active",
       "start_time": "2018-08-21T09:00:00.000Z",
       "end_time": "2018-08-21T10:00:00.000Z",
       "reservation_cutoff_time": "2018-08-21T09:00:00.000Z",
@@ -651,34 +638,34 @@ Content-Length: 4674
       "waitlist_capacity": 0,
       "num_waitlist_reservations": 0,
       "normal_capacity": 1,
-      "num_total_reservations": 0,
+      "num_normal_reservations": 0,
       "time_zone": "America/Los_Angeles",
-      "location_name": "Labadie, O'Reilly and DuBuque",
-      "location_id": "a3c98b38-0d6c-472d-887d-d525801eadb1",
-      "open_for_registration": false,
+      "location_name": "Corkery Inc",
+      "location_id": "db360552-8021-4984-8740-2fcc0fc59bd8",
+      "description": "Coagulation of the milk protein casein so cute but cheesy New York cheesecake harmful secondary metabolites - tongue in cheek taste and texture in all colours the whiter and fresher the cheese, the crisper and fruitier the wine should be cut to size blue fungi in cream a good alternative to cheesecloth.",
       "pre_reservation_message": null,
       "post_reservation_message": null,
-      "substitute_request": null,
       "provider": {
-        "id": "a621df30-a908-46bc-8dc6-c599dd3ed750",
-        "email": "jeanmarie.mann@wintheiserdach.name",
-        "slug": "hal-reilly",
-        "first_name": "Hal",
-        "last_name": "Reilly",
+        "id": "abcbbdc4-cabb-4248-93ad-2fcfcdaa8095",
+        "email": "antonia.balistreri@dooleybeier.biz",
+        "slug": "elicia-farrell",
+        "first_name": "Elicia",
+        "last_name": "Farrell",
         "description": null,
         "hire_date": null,
         "phone": null,
+        "is_kiosk": false,
         "profile_image": null
       },
-      "substitute": null,
-      "recurrence": null
+      "substitute": null
     },
     {
-      "id": "e1988669-cf6a-42ce-a681-5ca126024e1f",
-      "name": "Fat Goats 5dafb89c",
-      "resource_slug": "fat-goats-5dafb89c",
-      "description": "Separate the curds from the wey processed cheese has several technical advantages over traditional cheese of the Friesian herd - tongue in cheek team cheesy says hi when the rennet is added, curds are formed of the Friesian herd garlic cheese biscuits when the rennet is added, curds are formed separate the curds from the wey.",
-      "resource_type": null,
+      "id": "43f5bb31-2594-4758-9c1d-0cbe026a84a9",
+      "name": "Melting Affineurs 25574313",
+      "resource_id": "8a7caab2-287c-4c58-a13f-c2da8e27c3c2",
+      "resource_slug": "melting-affineurs-25574313",
+      "recurrence_id": null,
+      "state": "active",
       "start_time": "2018-08-22T05:00:00.000Z",
       "end_time": "2018-08-22T06:00:00.000Z",
       "reservation_cutoff_time": "2018-08-22T05:00:00.000Z",
@@ -692,34 +679,34 @@ Content-Length: 4674
       "waitlist_capacity": 0,
       "num_waitlist_reservations": 0,
       "normal_capacity": 1,
-      "num_total_reservations": 0,
+      "num_normal_reservations": 0,
       "time_zone": "America/Los_Angeles",
-      "location_name": "Labadie, O'Reilly and DuBuque",
-      "location_id": "a3c98b38-0d6c-472d-887d-d525801eadb1",
-      "open_for_registration": false,
+      "location_name": "Corkery Inc",
+      "location_id": "db360552-8021-4984-8740-2fcc0fc59bd8",
+      "description": "They can also age quite well in ripening cellars where cheese paring with wine cut the cheese salt, pepper, mustard and vinegar harmful secondary metabolites of cheesy business lingo of cheesy business lingo salt, pepper, mustard and vinegar so cute but cheesy blue fungi in cream.",
       "pre_reservation_message": null,
       "post_reservation_message": null,
-      "substitute_request": null,
       "provider": {
-        "id": "7e68c6f9-8686-4988-a3e8-e85c4107001b",
-        "email": "kassie_dicki@binsturner.us",
-        "slug": "bernard-batz",
-        "first_name": "Bernard",
-        "last_name": "Batz",
+        "id": "3d95aa46-7e5d-4714-b6ef-2b7935a441ab",
+        "email": "marylin@langoshziemann.info",
+        "slug": "donnell-wintheiser",
+        "first_name": "Donnell",
+        "last_name": "Wintheiser",
         "description": null,
         "hire_date": null,
         "phone": null,
+        "is_kiosk": false,
         "profile_image": null
       },
-      "substitute": null,
-      "recurrence": null
+      "substitute": null
     },
     {
-      "id": "7ac0cd4d-d0ad-43d5-900a-498584457530",
-      "name": "Melting Sheep fa140bb7",
-      "resource_slug": "melting-sheep-fa140bb7",
-      "description": "When the rennet is added, curds are formed taste and texture in all colours but poets have been mysteriously silent on the subject of cheese - tongue in cheek garlic cheese biscuits the milky way of blessed are the cheesemakers raw milk is unpasteurized - tongue in cheek they can also age quite well in ripening cellars where.",
-      "resource_type": null,
+      "id": "5f11144d-d8a2-4cba-a3c0-ac9523ba7003",
+      "name": "Dutch Goats 0c6dc4f2",
+      "resource_id": "e145a5b0-471a-48f3-9284-4661f72072cf",
+      "resource_slug": "dutch-goats-0c6dc4f2",
+      "recurrence_id": null,
+      "state": "active",
       "start_time": "2018-08-22T17:00:00.000Z",
       "end_time": "2018-08-22T18:00:00.000Z",
       "reservation_cutoff_time": "2018-08-22T17:00:00.000Z",
@@ -733,27 +720,26 @@ Content-Length: 4674
       "waitlist_capacity": 0,
       "num_waitlist_reservations": 0,
       "normal_capacity": 1,
-      "num_total_reservations": 0,
+      "num_normal_reservations": 0,
       "time_zone": "America/Los_Angeles",
-      "location_name": "Labadie, O'Reilly and DuBuque",
-      "location_id": "a3c98b38-0d6c-472d-887d-d525801eadb1",
-      "open_for_registration": false,
+      "location_name": "Corkery Inc",
+      "location_id": "db360552-8021-4984-8740-2fcc0fc59bd8",
+      "description": "Coagulation of the milk protein casein so cute but cheesy New York cheesecake harmful secondary metabolites - tongue in cheek taste and texture in all colours the whiter and fresher the cheese, the crisper and fruitier the wine should be cut to size blue fungi in cream a good alternative to cheesecloth.",
       "pre_reservation_message": null,
       "post_reservation_message": null,
-      "substitute_request": null,
       "provider": {
-        "id": "1ff72ad6-8984-477d-b082-5dda830ee7ad",
-        "email": "latisha_block@stark.biz",
-        "slug": "sonny-gerhold",
-        "first_name": "Sonny",
-        "last_name": "Gerhold",
+        "id": "6569e8f5-ed2d-408c-9bab-daaafc7e8554",
+        "email": "clora.fahey@wisozk.com",
+        "slug": "larita-stracke",
+        "first_name": "Larita",
+        "last_name": "Stracke",
         "description": null,
         "hire_date": null,
         "phone": null,
+        "is_kiosk": false,
         "profile_image": null
       },
-      "substitute": null,
-      "recurrence": null
+      "substitute": null
     }
   ],
   "reservations": [
@@ -781,7 +767,7 @@ Content-Length: 4674
 
 ```plaintext
 GET /api/offerings?time_zone_offset=420
-Origin: http://gulgowski-kiehn.mgrapp.com
+Origin: http://beer-kirlin-and-braun.mgrapp.com
 Host: example.org
 Cookie: 
 ```
@@ -813,14 +799,11 @@ time_zone_offset: 420
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;86560fc81400cca20a6af8bdbfe6d496&quot;
+ETag: W/&quot;022de7e60cf5c5aa8cf29385716b3730&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: f6d85042-418c-4552-96de-77ae1de45426
-X-Runtime: 0.022787
-Content-Length: 4898
+X-Request-Id: cccd38e7-ce04-4a3f-8432-fcc429f685dc
+X-Runtime: 0.022779
+Content-Length: 4482
 200 OK
 ```
 
@@ -829,11 +812,12 @@ Content-Length: 4898
 {
   "offerings": [
     {
-      "id": "dfb728e8-9630-48d3-8db7-c7676ebc9957",
-      "name": "Cheeky Affineurs fea2b24e",
-      "resource_slug": "cheeky-affineurs-fea2b24e",
-      "description": "Double dutch or so cute but cheesy but round cheeses are to be cut in wedges, like a cake but poets have been mysteriously silent on the subject of cheese What do you call cheese that isn't yours? Nacho Cheese; the sticky nature of processed cheese can make it difficult to slice, but in an artisan farmerhouse blue fungi in cream say cheese processed cheese has several technical advantages over traditional cheese.",
-      "resource_type": null,
+      "id": "d16d95c5-7074-4b97-a2ca-217a144a9abc",
+      "name": "Grated Affineurs d0c68430",
+      "resource_id": "70762b3c-debb-456f-9598-b4148cd34eb9",
+      "resource_slug": "grated-affineurs-d0c68430",
+      "recurrence_id": null,
+      "state": "active",
       "start_time": "2018-08-21T09:00:00.000Z",
       "end_time": "2018-08-21T10:00:00.000Z",
       "reservation_cutoff_time": "2018-08-21T09:00:00.000Z",
@@ -847,34 +831,34 @@ Content-Length: 4898
       "waitlist_capacity": 0,
       "num_waitlist_reservations": 0,
       "normal_capacity": 1,
-      "num_total_reservations": 0,
+      "num_normal_reservations": 0,
       "time_zone": "America/Los_Angeles",
-      "location_name": "Gusikowski and Sons",
-      "location_id": "901effe7-4182-49ed-850d-e7ea1dbaeef3",
-      "open_for_registration": false,
+      "location_name": "Jaskolski, Terry and Luettgen",
+      "location_id": "b65f7cd5-28ae-4b2b-8a88-de1f59f1c7c5",
+      "description": "Cheeseparing blessed are the cheesemakers soft ripening cheese for so cute but cheesy wash, rinse, repeat harmful secondary metabolites trying too hard, unsubtle, and inauthentic so cute but cheesy - tongue in cheek separate the curds from the wey.",
       "pre_reservation_message": null,
       "post_reservation_message": null,
-      "substitute_request": null,
       "provider": {
-        "id": "08949a15-03fd-4b64-b614-17d07828e8ca",
-        "email": "natisha_roberts@kuvalis.biz",
-        "slug": "marnie-bernhard",
-        "first_name": "Marnie",
-        "last_name": "Bernhard",
+        "id": "150e875b-1302-443e-a6b7-75a0533bffdd",
+        "email": "madeleine_rempel@vandervort.biz",
+        "slug": "louis-harris",
+        "first_name": "Louis",
+        "last_name": "Harris",
         "description": null,
         "hire_date": null,
         "phone": null,
+        "is_kiosk": false,
         "profile_image": null
       },
-      "substitute": null,
-      "recurrence": null
+      "substitute": null
     },
     {
-      "id": "8b1ae29b-4189-4741-8a8a-9c2090ad7e6b",
-      "name": "Milky Affineurs 9791d0b1",
-      "resource_slug": "milky-affineurs-9791d0b1",
-      "description": "Applewood smoked of cheesy business lingo bergkäse from the Alps he old cheese dairy buildings, situated on the historic site he old cheese dairy buildings, situated on the historic site but poets have been mysteriously silent on the subject of cheese trying too hard, unsubtle, and inauthentic Sheridans Cheesemongers dutch sandwich but round cheeses are to be cut in wedges, like a cake.",
-      "resource_type": null,
+      "id": "67671bdf-b64e-45a6-9d25-76332b89d7e0",
+      "name": "Grated Sheep 7a32c5be",
+      "resource_id": "3db4d07e-3b3d-421c-841b-6c5edc9fe0fb",
+      "resource_slug": "grated-sheep-7a32c5be",
+      "recurrence_id": null,
+      "state": "active",
       "start_time": "2018-08-22T05:00:00.000Z",
       "end_time": "2018-08-22T06:00:00.000Z",
       "reservation_cutoff_time": "2018-08-22T05:00:00.000Z",
@@ -888,34 +872,34 @@ Content-Length: 4898
       "waitlist_capacity": 0,
       "num_waitlist_reservations": 0,
       "normal_capacity": 1,
-      "num_total_reservations": 0,
+      "num_normal_reservations": 0,
       "time_zone": "America/Los_Angeles",
-      "location_name": "Gusikowski and Sons",
-      "location_id": "901effe7-4182-49ed-850d-e7ea1dbaeef3",
-      "open_for_registration": false,
+      "location_name": "Jaskolski, Terry and Luettgen",
+      "location_id": "b65f7cd5-28ae-4b2b-8a88-de1f59f1c7c5",
+      "description": "Penicillium roqueforti the milky way of they were so cheesed off team cheesy says hi double dutch or double dutch or - tongue in cheek salt, pepper, mustard and vinegar blue fungi in cream is like chalk and cheese.",
       "pre_reservation_message": null,
       "post_reservation_message": null,
-      "substitute_request": null,
       "provider": {
-        "id": "5ad4f45c-fb2c-418c-9089-e9d38f7eebc4",
-        "email": "petrina@koch.com",
-        "slug": "tonja-will",
-        "first_name": "Tonja",
-        "last_name": "Will",
+        "id": "3ae08d3b-4b4f-4079-90cf-2a69d43c1b30",
+        "email": "sherwood_stehr@medhursteichmann.com",
+        "slug": "joesph-roob",
+        "first_name": "Joesph",
+        "last_name": "Roob",
         "description": null,
         "hire_date": null,
         "phone": null,
+        "is_kiosk": false,
         "profile_image": null
       },
-      "substitute": null,
-      "recurrence": null
+      "substitute": null
     },
     {
-      "id": "f1d5e845-3b0c-4d3f-beac-2516e6817c17",
-      "name": "Cheeky Affineurs fea2b24e",
-      "resource_slug": "cheeky-affineurs-fea2b24e",
-      "description": "Double dutch or so cute but cheesy but round cheeses are to be cut in wedges, like a cake but poets have been mysteriously silent on the subject of cheese What do you call cheese that isn't yours? Nacho Cheese; the sticky nature of processed cheese can make it difficult to slice, but in an artisan farmerhouse blue fungi in cream say cheese processed cheese has several technical advantages over traditional cheese.",
-      "resource_type": null,
+      "id": "23b15b2f-5ae7-4e6d-ab61-f20de3a9dd3d",
+      "name": "Grated Affineurs d0c68430",
+      "resource_id": "70762b3c-debb-456f-9598-b4148cd34eb9",
+      "resource_slug": "grated-affineurs-d0c68430",
+      "recurrence_id": null,
+      "state": "active",
       "start_time": "2018-08-22T17:00:00.000Z",
       "end_time": "2018-08-22T18:00:00.000Z",
       "reservation_cutoff_time": "2018-08-22T17:00:00.000Z",
@@ -929,27 +913,26 @@ Content-Length: 4898
       "waitlist_capacity": 0,
       "num_waitlist_reservations": 0,
       "normal_capacity": 1,
-      "num_total_reservations": 0,
+      "num_normal_reservations": 0,
       "time_zone": "America/Los_Angeles",
-      "location_name": "Gusikowski and Sons",
-      "location_id": "901effe7-4182-49ed-850d-e7ea1dbaeef3",
-      "open_for_registration": false,
+      "location_name": "Jaskolski, Terry and Luettgen",
+      "location_id": "b65f7cd5-28ae-4b2b-8a88-de1f59f1c7c5",
+      "description": "Cheeseparing blessed are the cheesemakers soft ripening cheese for so cute but cheesy wash, rinse, repeat harmful secondary metabolites trying too hard, unsubtle, and inauthentic so cute but cheesy - tongue in cheek separate the curds from the wey.",
       "pre_reservation_message": null,
       "post_reservation_message": null,
-      "substitute_request": null,
       "provider": {
-        "id": "e1d30b47-4893-415e-95a4-f00db29f05c8",
-        "email": "laticia@lebsack.com",
-        "slug": "margie-mitchell",
-        "first_name": "Margie",
-        "last_name": "Mitchell",
+        "id": "ea6ca0a1-8d8f-4c2d-9199-007cbdc773dd",
+        "email": "glenda_breitenberg@baumbach.name",
+        "slug": "royal-botsford",
+        "first_name": "Royal",
+        "last_name": "Botsford",
         "description": null,
         "hire_date": null,
         "phone": null,
+        "is_kiosk": false,
         "profile_image": null
       },
-      "substitute": null,
-      "recurrence": null
+      "substitute": null
     }
   ],
   "reservations": [
@@ -981,8 +964,8 @@ Purchasing one or more items
 
 ```plaintext
 POST /api/orders
-Origin: http://bernier-boyer.mgrapp.com
-Authorization: Bearer 61d1635d-6600-40c2-897d-413e6d7ca6f6
+Origin: http://collier-inc.mgrapp.com
+Authorization: Bearer 2ee2a92e-5a12-4f0e-8f9c-bf985064acce
 Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Cookie: 
@@ -994,7 +977,7 @@ Cookie:
 
 
 ```json
-line_items[][variant_id]=4e348be6-9fc5-41c0-bd4e-058a8bde9474&line_items[][quantity]=1&payments[][payment_type]=stripe_cc&payments[][source_id]=test_cc_2
+line_items[][variant_id]=188847ad-9a4f-4f6e-8f99-c4f21829d229&line_items[][quantity]=1&payments[][payment_type]=stripe_cc&payments[][source_id]=test_cc_2
 ```
 
 
@@ -1009,14 +992,11 @@ line_items[][variant_id]=4e348be6-9fc5-41c0-bd4e-058a8bde9474&line_items[][quant
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;e1f96db30d105f378bd96cb300794c77&quot;
+ETag: W/&quot;fb0363f45410fe8f68d311d37756e27d&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 1700cd3d-994d-4429-8272-0ab83d5ce3a7
-X-Runtime: 0.104268
-Content-Length: 1563
+X-Request-Id: 209d14eb-c408-47c4-aa2f-fa0e661af2a3
+X-Runtime: 0.150319
+Content-Length: 1505
 201 Created
 ```
 
@@ -1024,36 +1004,36 @@ Content-Length: 1563
 ```json
 {
   "order": {
-    "id": "522f6a1d-f0f0-4d76-b87a-de395ee8d4ad",
-    "number": "522f6a1d",
+    "id": "ce9d5888-70a4-4908-bedb-6352127f9854",
+    "number": "ce9d5888",
     "line_items": [
       {
-        "id": "5812148a-e337-493e-bde3-aba739d86a2c",
+        "id": "4f21bc83-3410-4612-91c1-123929870307",
         "quantity": 1,
-        "per_unit_price": "70.0",
-        "name": "VU Power Gel Receiver",
+        "per_unit_price": "74.0",
+        "name": "Pountfunc Side Audible System",
         "variant": {
-          "id": "4e348be6-9fc5-41c0-bd4e-058a8bde9474",
-          "price": "70.0",
+          "id": "188847ad-9a4f-4f6e-8f99-c4f21829d229",
+          "price": "74.0",
           "is_master": true
         }
       }
     ],
-    "created_at": "2018-12-30T17:52:18.913Z",
+    "created_at": "2019-03-13T18:33:02.553Z",
     "total": "0.0",
-    "item_total": "70.0",
+    "item_total": "74.0",
     "adjustment_total": "0.0",
-    "payment_total": "70.0",
+    "payment_total": "74.0",
     "payment_state": "complete",
     "fulfillment_state": "complete",
     "user": {
-      "id": "d4d2c279-3d2b-4a5d-b706-0f875d3f3698",
+      "id": "cd137fca-c601-4b4c-b709-90355cb99be5",
       "account_balance": "0.0",
       "signed_waiver_at": null,
-      "created_at": "2018-12-30T17:52:18.843Z",
-      "email": "keira_moen@yost.biz",
-      "first_name": "Shanita",
-      "last_name": "Brakus",
+      "created_at": "2019-03-13T18:33:02.444Z",
+      "email": "pilar_auer@reinger.ca",
+      "first_name": "Marla",
+      "last_name": "Heller",
       "address1": null,
       "address2": null,
       "city": null,
@@ -1061,39 +1041,32 @@ Content-Length: 1563
       "zip_code": null,
       "phone": null,
       "dob": null,
-      "member_start_date": "2018-12-30"
+      "member_start_date": "2019-03-13",
+      "password_reset_required": false,
+      "emergency_contact_name": null,
+      "emergency_contact_phone": null
     },
     "payments": [
       {
-        "id": "5abf4dc5-7f45-48d8-8a99-13bcc3ddedb3",
-        "created_at": "2018-12-30T17:52:18.919Z",
+        "id": "8840a456-3b19-4840-b351-1342a3bfd6a0",
+        "created_at": "2019-03-13T18:33:02.570Z",
         "state": "complete",
-        "amount": "70.0",
+        "amount": "74.0",
         "fail_message": null,
         "process_after": null,
-        "processed_at": "2018-12-30T17:52:18.940Z",
+        "processed_at": "2019-03-13T18:33:02.608Z",
         "payment_type": "stripe_cc",
         "description": null,
         "payment_source_invalid": false,
-        "payment_method": {
-          "id": "test_cc_2",
-          "source_id": "test_cc_2",
-          "payment_type": "stripe_cc",
-          "brand": "Visa",
-          "exp_month": 11,
-          "exp_year": 2099,
-          "last4": "1234",
-          "balance": null,
-          "is_default": true
-        },
+        "payment_method": null,
         "transactable": {
           "type": "order",
-          "id": "522f6a1d-f0f0-4d76-b87a-de395ee8d4ad",
-          "number": "522f6a1d",
+          "id": "ce9d5888-70a4-4908-bedb-6352127f9854",
+          "number": "ce9d5888",
           "total": "0.0",
-          "item_total": "70.0",
+          "item_total": "74.0",
           "adjustment_total": "0.0",
-          "payment_total": "70.0",
+          "payment_total": "74.0",
           "payment_state": "complete",
           "fulfillment_state": "complete"
         },
@@ -1120,8 +1093,8 @@ Ways in which a user can pay for services. Currently just Stripe credit cards an
 
 ```plaintext
 POST /api/payment_methods
-Origin: http://oberbrunner-and-sons.mgrapp.com
-Authorization: Bearer 9ba1a1e4-36f8-430f-a9b2-1ade3ed6c86b
+Origin: http://von-and-sons.mgrapp.com
+Authorization: Bearer 70f7939e-d34d-4dc1-bf41-6504105612ed
 Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Cookie: 
@@ -1147,13 +1120,10 @@ stripe_token=test_tok_1
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
 ETag: W/&quot;02eda27274dacb5d255f29524466cc3f&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 2fb20350-f3bc-429b-bfd0-d4b544a6655e
-X-Runtime: 0.010772
+X-Request-Id: e089a144-e101-4993-aeeb-7e743094a7e6
+X-Runtime: 0.025343
 Content-Length: 181
 201 Created
 ```
@@ -1186,8 +1156,8 @@ Content-Length: 181
 
 ```plaintext
 GET /api/payment_methods
-Origin: http://west-gottlieb-and-hammes.mgrapp.com
-Authorization: Bearer e5506e6b-f855-4126-ad6f-a267d6d200f7
+Origin: http://kovacek-inc.mgrapp.com
+Authorization: Bearer 6bb08ea0-9ccc-439f-9a02-735b34d84d3c
 Host: example.org
 Cookie: 
 ```
@@ -1204,13 +1174,10 @@ None known.
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
 ETag: W/&quot;7216d8771b3dc03ea716050a31fed360&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 0527acc7-21e7-4d77-889e-96463881223c
-X-Runtime: 0.013311
+X-Request-Id: 3ecb1865-e723-42a7-93e9-b5a3f2dc1305
+X-Runtime: 0.007456
 Content-Length: 339
 200 OK
 ```
@@ -1259,8 +1226,8 @@ Anything that can be purchased by a user. Includes packages, gift cards, and phy
 #### Endpoint
 
 ```plaintext
-GET /api/products?type=package
-Origin: http://bahringer-schmeler-and-bernier.mgrapp.com
+GET /api/products?types[]=package
+Origin: http://barton-group.mgrapp.com
 Host: example.org
 Cookie: 
 ```
@@ -1271,7 +1238,7 @@ Cookie:
 
 
 ```json
-type: package
+types: [&quot;package&quot;]
 ```
 
 
@@ -1280,7 +1247,7 @@ type: package
 | page  | Page |
 | per_page  | Per Page |
 | q  | Search by Name |
-| type  | Filter by Product Type |
+| types  | Filter by Product Type |
 | resource_offering_id  | Filter packages by applicability to given offering |
 
 
@@ -1289,14 +1256,11 @@ type: package
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;5a5c6629e057dbd564186f7c9b6b1cc6&quot;
+ETag: W/&quot;6dabcce5b728736c579c6887077b3ce8&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 4993c204-8b68-4543-8f69-246fac1dfdcd
-X-Runtime: 0.011717
-Content-Length: 1667
+X-Request-Id: 9c862693-da8d-432c-a263-bf28d5862298
+X-Runtime: 0.014522
+Content-Length: 1749
 200 OK
 ```
 
@@ -1305,21 +1269,22 @@ Content-Length: 1667
 {
   "products": [
     {
-      "id": "c3eff894-f50a-47ce-98fc-980c59449158",
-      "name": "Lucell Gel Bridge",
-      "slug": "lucell-gel-bridge",
+      "id": "0766ade6-f912-4674-bcf7-d06a8998ca4b",
+      "name": "Phienceforge Auto Amplifier",
+      "slug": "phienceforge-auto-amplifier",
       "description": null,
       "product_type": "package",
       "available": true,
       "available_online": true,
       "package": {
-        "id": "a608f699-1a89-4a4b-bdde-753c4c5441f0",
+        "id": "4a2fc548-ea37-4c3b-b30c-657733cb2d6e",
         "unlimited_sessions": false,
         "num_sessions": 10,
         "expiration_type": "none",
         "expiration_time_in_days": 0,
         "redemption_limit_type": "none",
         "redemption_limit_value": 0,
+        "advance_schedule_in_days": null,
         "shareable": false,
         "for_guest_only": false,
         "guests_allowed": true,
@@ -1328,36 +1293,40 @@ Content-Length: 1667
         "recurrence_period": null,
         "is_recurring": false,
         "recurring_price": "0.0",
-        "first_instance_is_free": true,
         "waitlist_priority": 1
       },
       "gift_card": null,
+      "challenge_entry": null,
       "variants": [
         {
-          "id": "9e7935f8-0ae7-47eb-a770-566177cf0efb",
-          "price": "74.0",
+          "id": "fefb5b73-3d9b-46c6-a52d-2ebdac51c6ee",
+          "price": "22.0",
           "is_master": true
         }
       ],
-      "price": "74.0",
+      "perks": [
+
+      ],
+      "price": "22.0",
       "image": null
     },
     {
-      "id": "17a0217d-b745-45ca-9ac3-889e6fa4c510",
-      "name": "Aftercell Gel Video Bridge",
-      "slug": "aftercell-gel-video-bridge",
+      "id": "e0067af1-bfd9-4e83-a08b-fd3bbea2b669",
+      "name": "Phienewood Direct Kit",
+      "slug": "phienewood-direct-kit",
       "description": null,
       "product_type": "package",
       "available": true,
       "available_online": true,
       "package": {
-        "id": "43e21d5c-b5ed-4be2-827b-dfc75c55678e",
+        "id": "7f8af95f-0c5e-405f-8d20-c10d2acf2482",
         "unlimited_sessions": false,
         "num_sessions": 10,
         "expiration_type": "none",
         "expiration_time_in_days": 0,
         "redemption_limit_type": "none",
         "redemption_limit_value": 0,
+        "advance_schedule_in_days": null,
         "shareable": false,
         "for_guest_only": false,
         "guests_allowed": true,
@@ -1366,18 +1335,21 @@ Content-Length: 1667
         "recurrence_period": null,
         "is_recurring": false,
         "recurring_price": "0.0",
-        "first_instance_is_free": true,
         "waitlist_priority": 1
       },
       "gift_card": null,
+      "challenge_entry": null,
       "variants": [
         {
-          "id": "15ce0f7f-25f6-480f-86be-f99f4098735d",
-          "price": "36.0",
+          "id": "c9d8fc18-09f0-4b84-a5a5-a51e4c8246dd",
+          "price": "76.0",
           "is_master": true
         }
       ],
-      "price": "36.0",
+      "perks": [
+
+      ],
+      "price": "76.0",
       "image": null
     }
   ],
@@ -1403,7 +1375,7 @@ Content-Length: 1667
 
 ```plaintext
 GET /api/products
-Origin: http://mcdermott-inc.mgrapp.com
+Origin: http://bartoletti-and-sons.mgrapp.com
 Host: example.org
 Cookie: 
 ```
@@ -1419,7 +1391,7 @@ Cookie:
 | page  | Page |
 | per_page  | Per Page |
 | q  | Search by Name |
-| type  | Filter by Product Type |
+| types  | Filter by Product Type |
 | resource_offering_id  | Filter packages by applicability to given offering |
 
 
@@ -1428,14 +1400,11 @@ Cookie:
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;50a8f0b89e64b0a32a8637aeb8a62b1c&quot;
+ETag: W/&quot;1ef347be831f527bd4ff0b9b247aac02&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: cd01ed5a-566b-4df4-a9fd-edba93ac5c23
-X-Runtime: 0.017002
-Content-Length: 2833
+X-Request-Id: 463b3d01-e6c9-4a2c-80e8-4a0abbea7b32
+X-Runtime: 0.097222
+Content-Length: 3021
 200 OK
 ```
 
@@ -1444,145 +1413,165 @@ Content-Length: 2833
 {
   "products": [
     {
-      "id": "a82b651b-4530-489d-a72c-08101dc19059",
-      "name": "Pyneforge Video Mount",
-      "slug": "pyneforge-video-mount",
-      "description": null,
-      "product_type": "normal",
-      "available": true,
-      "available_online": true,
-      "package": null,
-      "gift_card": null,
-      "variants": [
-        {
-          "id": "2be2a94f-7779-40f2-a9c2-7648de62a408",
-          "price": "57.0",
-          "is_master": true
-        }
-      ],
-      "price": "57.0",
-      "image": null
-    },
-    {
-      "id": "7bec7d3c-a2f7-412a-8dd4-a496937615d7",
-      "name": "Lucell Audible Amplifier",
-      "slug": "lucell-audible-amplifier",
-      "description": null,
-      "product_type": "normal",
-      "available": true,
-      "available_online": true,
-      "package": null,
-      "gift_card": null,
-      "variants": [
-        {
-          "id": "e77056a1-f2e4-4ecc-9875-871c079cdba0",
-          "price": "49.0",
-          "is_master": true
-        }
-      ],
-      "price": "49.0",
-      "image": null
-    },
-    {
-      "id": "aa09a7a1-3c2d-47c2-beba-bcbeabd1b56b",
-      "name": "Reusche Side System",
-      "slug": "reusche-side-system",
-      "description": null,
-      "product_type": "package",
-      "available": true,
-      "available_online": true,
-      "package": {
-        "id": "b6a32d7e-ecb4-4c24-91fe-55b9e59a5324",
-        "unlimited_sessions": false,
-        "num_sessions": 10,
-        "expiration_type": "none",
-        "expiration_time_in_days": 0,
-        "redemption_limit_type": "none",
-        "redemption_limit_value": 0,
-        "shareable": false,
-        "for_guest_only": false,
-        "guests_allowed": true,
-        "recurrence_type": null,
-        "recurrence_unit": null,
-        "recurrence_period": null,
-        "is_recurring": false,
-        "recurring_price": "0.0",
-        "first_instance_is_free": true,
-        "waitlist_priority": 1
-      },
-      "gift_card": null,
-      "variants": [
-        {
-          "id": "a1583ae9-11a6-4d5b-9adf-1aa84f26ccb2",
-          "price": "73.0",
-          "is_master": true
-        }
-      ],
-      "price": "73.0",
-      "image": null
-    },
-    {
-      "id": "bdcb482d-8057-4d04-9671-d84e7d82e35c",
-      "name": "Trintwood Video Component",
-      "slug": "trintwood-video-component",
-      "description": null,
-      "product_type": "package",
-      "available": true,
-      "available_online": true,
-      "package": {
-        "id": "fceaa0b1-8039-4bb4-9798-db2faadb8c52",
-        "unlimited_sessions": false,
-        "num_sessions": 10,
-        "expiration_type": "none",
-        "expiration_time_in_days": 0,
-        "redemption_limit_type": "none",
-        "redemption_limit_value": 0,
-        "shareable": false,
-        "for_guest_only": false,
-        "guests_allowed": true,
-        "recurrence_type": null,
-        "recurrence_unit": null,
-        "recurrence_period": null,
-        "is_recurring": false,
-        "recurring_price": "0.0",
-        "first_instance_is_free": true,
-        "waitlist_priority": 1
-      },
-      "gift_card": null,
-      "variants": [
-        {
-          "id": "edb3ad5d-a297-45d6-9897-84876c3e1826",
-          "price": "22.0",
-          "is_master": true
-        }
-      ],
-      "price": "22.0",
-      "image": null
-    },
-    {
-      "id": "830a91c4-073f-406d-a0c6-1af40107f9a5",
-      "name": "Cygfunc Remote HD Bracket",
-      "slug": "cygfunc-remote-hd-bracket",
+      "id": "e2b7e92c-cca8-4b18-bb49-3b759d76d499",
+      "name": "Sinebalt Remote Portable System",
+      "slug": "sinebalt-remote-portable-system",
       "description": null,
       "product_type": "gift_card",
       "available": true,
       "available_online": true,
       "package": null,
       "gift_card": {
-        "id": "08d4f464-ecad-4cf0-a413-b654431c58ac",
+        "id": "aded9f01-80da-4f13-8ab2-0149f70cb9b3",
         "gift_card_type": "cash",
         "fixed_amount": true,
         "amount": "20.0",
         "num_sessions": 0
       },
+      "challenge_entry": null,
       "variants": [
         {
-          "id": "3f31be69-853d-42ab-b26d-6eaa61b8fce6",
+          "id": "4c87e468-8f64-42cb-a896-ac74438bcb95",
+          "price": "9.0",
+          "is_master": true
+        }
+      ],
+      "perks": [
+
+      ],
+      "price": "9.0",
+      "image": null
+    },
+    {
+      "id": "5cecdce9-29ad-4fd1-8538-1a353b232551",
+      "name": "MIF Electric Kit",
+      "slug": "mif-electric-kit",
+      "description": null,
+      "product_type": "package",
+      "available": true,
+      "available_online": true,
+      "package": {
+        "id": "1f1b061f-0ab4-4183-9505-68d1a46e3fbd",
+        "unlimited_sessions": false,
+        "num_sessions": 10,
+        "expiration_type": "none",
+        "expiration_time_in_days": 0,
+        "redemption_limit_type": "none",
+        "redemption_limit_value": 0,
+        "advance_schedule_in_days": null,
+        "shareable": false,
+        "for_guest_only": false,
+        "guests_allowed": true,
+        "recurrence_type": null,
+        "recurrence_unit": null,
+        "recurrence_period": null,
+        "is_recurring": false,
+        "recurring_price": "0.0",
+        "waitlist_priority": 1
+      },
+      "gift_card": null,
+      "challenge_entry": null,
+      "variants": [
+        {
+          "id": "bb27ea10-a275-4b28-a867-5096fd7f222d",
           "price": "33.0",
           "is_master": true
         }
       ],
+      "perks": [
+
+      ],
       "price": "33.0",
+      "image": null
+    },
+    {
+      "id": "2224f91f-14ca-4e00-b836-f80d06593256",
+      "name": "Brure Video Compressor",
+      "slug": "brure-video-compressor",
+      "description": null,
+      "product_type": "package",
+      "available": true,
+      "available_online": true,
+      "package": {
+        "id": "dba601ef-5048-43ce-a4df-43e6fb522275",
+        "unlimited_sessions": false,
+        "num_sessions": 10,
+        "expiration_type": "none",
+        "expiration_time_in_days": 0,
+        "redemption_limit_type": "none",
+        "redemption_limit_value": 0,
+        "advance_schedule_in_days": null,
+        "shareable": false,
+        "for_guest_only": false,
+        "guests_allowed": true,
+        "recurrence_type": null,
+        "recurrence_unit": null,
+        "recurrence_period": null,
+        "is_recurring": false,
+        "recurring_price": "0.0",
+        "waitlist_priority": 1
+      },
+      "gift_card": null,
+      "challenge_entry": null,
+      "variants": [
+        {
+          "id": "7f62204b-b1dd-4698-87e9-377fe41a0f1a",
+          "price": "16.0",
+          "is_master": true
+        }
+      ],
+      "perks": [
+
+      ],
+      "price": "16.0",
+      "image": null
+    },
+    {
+      "id": "6c2fb832-d21f-46e9-a1d1-aabb28fdc194",
+      "name": "Lunix HD Portable Filter",
+      "slug": "lunix-hd-portable-filter",
+      "description": null,
+      "product_type": "normal",
+      "available": true,
+      "available_online": true,
+      "package": null,
+      "gift_card": null,
+      "challenge_entry": null,
+      "variants": [
+        {
+          "id": "7a023420-3229-45db-9238-4be6f808c6f8",
+          "price": "38.0",
+          "is_master": true
+        }
+      ],
+      "perks": [
+
+      ],
+      "price": "38.0",
+      "image": null
+    },
+    {
+      "id": "7dc0d377-bd3a-4a6b-8fb8-4b6860346a21",
+      "name": "Phounewood Output Transmitter",
+      "slug": "phounewood-output-transmitter",
+      "description": null,
+      "product_type": "normal",
+      "available": true,
+      "available_online": true,
+      "package": null,
+      "gift_card": null,
+      "challenge_entry": null,
+      "variants": [
+        {
+          "id": "71be93b9-0d47-48c2-894a-19658d8b9335",
+          "price": "74.0",
+          "is_master": true
+        }
+      ],
+      "perks": [
+
+      ],
+      "price": "74.0",
       "image": null
     }
   ],
@@ -1612,8 +1601,8 @@ Specific instance of a user signing up for an offering
 
 ```plaintext
 POST /api/reservations
-Origin: http://sipes-llc.mgrapp.com
-Authorization: Bearer 09537af6-a62a-405b-a806-afa4d91ded60
+Origin: http://swift-jenkins.mgrapp.com
+Authorization: Bearer cd1189fe-1cd6-4ded-b73b-4c3916478eea
 Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Cookie: 
@@ -1625,30 +1614,29 @@ Cookie:
 
 
 ```json
-resource_offering_id=a5b5cf3b-7bb3-4b6e-8f0e-64d53d9168ea&package_instance_id=64306062-6927-43cc-944e-029a1c292aa8
+reservations[][resource_offering_id]=2d8b0be4-bb47-449d-bb4a-13e384c0dd05&reservations[][package_instance_id]=04a5722d-20ab-4145-8496-c9f1268d2148
 ```
 
 
 | Name | Description |
 |:-----|:------------|
-| stripe_token *required* | Token returned by Stripe SDK |
-| resource_offering_id *required* | Id of offering to sign up for |
-| package_instance_id *required* | Id of package used to pay for reservation |
-| is_guest  | Reservation is for a guest? |
-| guest_name  | Guest Name |
-| guest_email  | Guest Email |
-| guest_phone  | Guest Phone |
-| accepts_waiver  | If user accepts waiver |
-| note  | Note to the instructor |
-| recurrence[start_date]  | Recurrence Start Date |
-| recurrence[end_date]  | Recurrence End Date |
-| recurrence[on_monday]  | Include Monday recurrences |
-| recurrence[on_tuesday]  | Include Tuesday recurrences |
-| recurrence[on_wednesday]  | Include Wednesday recurrences |
-| recurrence[on_thursday]  | Include Thursday recurrences |
-| recurrence[on_friday]  | Include Friday recurrences |
-| recurrence[on_saturday]  | Include Saturday recurrences |
-| recurrence[on_sunday]  | Include Sunday recurrences |
+| reservations[resource_offering_id] *required* | Id of offering to sign up for |
+| reservations[package_instance_id] *required* | Id of package used to pay for reservation |
+| reservations[is_guest]  | Reservation is for a guest? |
+| reservations[guest_name]  | Guest Name |
+| reservations[guest_email]  | Guest Email |
+| reservations[guest_phone]  | Guest Phone |
+| reservations[accepts_waiver]  | If user accepts waiver |
+| reservations[note]  | Note to the instructor |
+| reservations[recurrence][start_date]  | Recurrence Start Date |
+| reservations[recurrence][end_date]  | Recurrence End Date |
+| reservations[recurrence][on_monday]  | Include Monday recurrences |
+| reservations[recurrence][on_tuesday]  | Include Tuesday recurrences |
+| reservations[recurrence][on_wednesday]  | Include Wednesday recurrences |
+| reservations[recurrence][on_thursday]  | Include Thursday recurrences |
+| reservations[recurrence][on_friday]  | Include Friday recurrences |
+| reservations[recurrence][on_saturday]  | Include Saturday recurrences |
+| reservations[recurrence][on_sunday]  | Include Sunday recurrences |
 
 
 
@@ -1656,14 +1644,11 @@ resource_offering_id=a5b5cf3b-7bb3-4b6e-8f0e-64d53d9168ea&package_instance_id=64
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;995dea1750bb6caea0a9128834ebf638&quot;
+ETag: W/&quot;dfdbbd4159c1a9d9bc83ff6d11cc9a6f&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 46cd2fe0-3594-4bbe-9b83-40c890e841ff
-X-Runtime: 0.061330
-Content-Length: 3311
+X-Request-Id: 9d461f40-cd83-4649-a777-77263b67b673
+X-Runtime: 0.096296
+Content-Length: 2844
 201 Created
 ```
 
@@ -1672,112 +1657,92 @@ Content-Length: 3311
 {
   "reservations": [
     {
-      "id": "5c4bb9e1-a3cd-4aac-9849-114e061f770b",
+      "id": "d36579c0-a4ef-4f5c-b8b3-d0b13df49251",
       "state": "reserved",
-      "created_at": "2018-12-30T17:52:18.489Z",
-      "offering_id": "a5b5cf3b-7bb3-4b6e-8f0e-64d53d9168ea",
-      "package_instance_id": "64306062-6927-43cc-944e-029a1c292aa8",
-      "user": {
-        "id": "c651702e-a0cc-425d-98b2-588388c1701a",
-        "first_name": "Boris",
-        "last_name": "Powlowski",
-        "email": "carey@padberg.us"
-      },
+      "created_at": "2019-03-13T18:33:01.388Z",
+      "cancelled_at": null,
+      "offering_id": "2d8b0be4-bb47-449d-bb4a-13e384c0dd05",
+      "package_instance_id": "04a5722d-20ab-4145-8496-c9f1268d2148",
       "is_guest": false,
-      "guest_email": null,
-      "guest_name": null,
-      "guest_phone": null,
-      "note": null,
       "time_zone": "America/Los_Angeles",
-      "start_time": "2018-12-30T18:52:18.439Z",
+      "start_time": "2019-03-13T19:33:01.269Z",
+      "waitlist_promoted_at": null,
       "signed_in_at": null,
-      "resource_name": "Nutty Dairy bd75d2d9",
-      "package_name": "Brestforge Air Amplifier",
-      "location_name": "Gislason, Dooley and Hilll",
-      "package_expiration_date": null,
-      "late_cancel_cutoff_time": "2018-12-30T18:52:18.439Z",
-      "waitlist_cutoff_time": "2018-12-30T18:52:18.439Z",
-      "end_time": "2018-12-30T19:52:18.439Z",
-      "provider": {
-        "first_name": "Daniela",
-        "last_name": "O'Connell",
-        "description": null,
-        "slug": "daniela-o-connell"
-      },
-      "substitute": null
+      "resource_name": "Sharp Sheep f611ec9d"
     }
   ],
   "offerings": [
     {
-      "id": "a5b5cf3b-7bb3-4b6e-8f0e-64d53d9168ea",
-      "name": "Nutty Dairy bd75d2d9",
-      "resource_slug": "nutty-dairy-bd75d2d9",
-      "description": "They were so cheesed off it is blue sky thinking the sticky nature of processed cheese can make it difficult to slice, but soft ripening cheese for but round cheeses are to be cut in wedges, like a cake of cheesy business lingo taste and texture in all colours when the rennet is added, curds are formed taste and texture in all colours the milky way of.",
-      "resource_type": null,
-      "start_time": "2018-12-30T18:52:18.439Z",
-      "end_time": "2018-12-30T19:52:18.439Z",
-      "reservation_cutoff_time": "2018-12-30T18:52:18.439Z",
+      "id": "2d8b0be4-bb47-449d-bb4a-13e384c0dd05",
+      "name": "Sharp Sheep f611ec9d",
+      "resource_id": "495c5856-7e38-4be3-90f7-290c2a018819",
+      "resource_slug": "sharp-sheep-f611ec9d",
+      "recurrence_id": null,
+      "state": "active",
+      "start_time": "2019-03-13T19:33:01.269Z",
+      "end_time": "2019-03-13T20:33:01.269Z",
+      "reservation_cutoff_time": "2019-03-13T19:33:01.269Z",
       "reservation_cutoff_time_in_minutes": 0,
-      "waitlist_cutoff_time": "2018-12-30T18:52:18.439Z",
+      "waitlist_cutoff_time": "2019-03-13T19:33:01.269Z",
       "waitlist_cutoff_time_in_minutes": 0,
-      "late_cancel_cutoff_time": "2018-12-30T18:52:18.439Z",
+      "late_cancel_cutoff_time": "2019-03-13T19:33:01.269Z",
       "late_cancel_cutoff_time_in_minutes": 0,
       "late_cancel_grace_period_in_minutes": 0,
       "waitlist_allowed": true,
       "waitlist_capacity": 0,
       "num_waitlist_reservations": 0,
       "normal_capacity": 10,
-      "num_total_reservations": 1,
+      "num_normal_reservations": 1,
       "time_zone": "America/Los_Angeles",
-      "location_name": "Gislason, Dooley and Hilll",
-      "location_id": "d9bde993-2e2a-4b13-b128-a9d33de2b883",
-      "open_for_registration": true,
+      "location_name": "Mraz-Reynolds",
+      "location_id": "f23b3394-ea76-4d1c-90e1-b546fe3c402d",
+      "description": "Sheridans cheesemongers is like chalk and cheese applewood smoked trying too hard, unsubtle, and inauthentic harmful secondary metabolites team cheesy says hi of cheesy business lingo until the wheels form a white coat of penicillium moulds blessed are the cheesemakers harmful secondary metabolites.",
       "pre_reservation_message": null,
       "post_reservation_message": null,
-      "substitute_request": null,
       "provider": {
-        "id": "5be6bad8-434f-4657-be5a-04f0b1113bfd",
-        "email": "ada.kling@feestkeeling.us",
-        "slug": "daniela-o-connell",
-        "first_name": "Daniela",
-        "last_name": "O'Connell",
+        "id": "9a3fe3f9-c70e-4a45-8c4e-3bf5d44fcfac",
+        "email": "lorie@jakubowskimante.biz",
+        "slug": "leta-haley",
+        "first_name": "Leta",
+        "last_name": "Haley",
         "description": null,
         "hire_date": null,
         "phone": null,
+        "is_kiosk": false,
         "profile_image": null
       },
-      "substitute": null,
-      "recurrence": null
+      "substitute": null
     }
   ],
   "packages": [
     {
-      "id": "64306062-6927-43cc-944e-029a1c292aa8",
-      "name": "Brestforge Air Amplifier",
+      "id": "04a5722d-20ab-4145-8496-c9f1268d2148",
+      "name": "Aftersync Gel Transmitter",
       "state": "active",
       "start_date": null,
       "end_date": null,
       "unlimited_sessions": true,
       "total_sessions": 10,
       "sessions_remaining": 10,
-      "created_at": "2018-12-30T17:52:18.400Z",
+      "created_at": "2019-03-13T18:33:01.124Z",
       "is_recurring": false,
       "shareable": false,
       "guests_allowed": true,
       "for_guest_only": false,
       "waitlist_priority": 1,
+      "advance_schedule_in_days": null,
       "recurrence_type": null,
       "recurrence_unit": null,
       "recurrence_period": null,
       "users": [
         {
-          "id": "c651702e-a0cc-425d-98b2-588388c1701a",
+          "id": "ea284658-5850-483c-a6a5-7794cec5501f",
           "account_balance": "0.0",
           "signed_waiver_at": null,
-          "created_at": "2018-12-30T17:52:18.410Z",
-          "email": "carey@padberg.us",
-          "first_name": "Boris",
-          "last_name": "Powlowski",
+          "created_at": "2019-03-13T18:33:01.149Z",
+          "email": "na.schulist@pagac.ca",
+          "first_name": "Melina",
+          "last_name": "Kreiger",
           "address1": null,
           "address2": null,
           "city": null,
@@ -1785,12 +1750,17 @@ Content-Length: 3311
           "zip_code": null,
           "phone": null,
           "dob": null,
-          "member_start_date": "2018-12-30"
+          "member_start_date": "2019-03-13",
+          "password_reset_required": false,
+          "emergency_contact_name": null,
+          "emergency_contact_phone": null
         }
       ]
     }
   ],
-  "missing": null
+  "missing": [
+
+  ]
 }
 ```
 
@@ -1812,7 +1782,7 @@ it (e.g. Pilates at 8am on July 14 with Sarah)
 
 ```plaintext
 GET /api/resources
-Origin: http://watsica-kulas-and-fahey.mgrapp.com
+Origin: http://schiller-kihn-and-braun.mgrapp.com
 Host: example.org
 Cookie: 
 ```
@@ -1835,14 +1805,11 @@ Cookie:
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;036cc5e03380d4e94eaddb96c27f6715&quot;
+ETag: W/&quot;b8e9d045dce10bbefcb6c3f7c0e89f27&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 910dba4c-5aea-4a40-910b-cb67879eb7e5
-X-Runtime: 0.011433
-Content-Length: 1627
+X-Request-Id: 40babbea-de9e-4df0-a5ce-e514ec4d7d16
+X-Runtime: 0.016796
+Content-Length: 1929
 200 OK
 ```
 
@@ -1851,27 +1818,33 @@ Content-Length: 1627
 {
   "resources": [
     {
-      "id": "f17ac53e-a195-4f26-bbca-9d998f9d39c2",
-      "name": "Cheeky Goats 205e5a15",
-      "slug": "cheeky-goats-205e5a15",
-      "description": "Separate the curds from the wey a good alternative to cheesecloth the early bird may get the worm, but the second mouse gets the cheese in the trap cheeseparing taste and texture in all colours taste and texture in all colours New York cheesecake blue fungi in cream when the rennet is added, curds are formed the slice of cheese is placed on top of the meat patty.",
+      "id": "a154b01d-2baf-42e4-9c1f-130ff1e7e5a0",
+      "name": "Melting Alpine a27ab788",
+      "slug": "melting-alpine-a27ab788",
+      "description": "The slice of cheese is placed on top of the meat patty blue fungi in cream is like chalk and cheese but don't you agree? It is no use crying over spilled milk the sticky nature of processed cheese can make it difficult to slice, but cut the cheese the whiter and fresher the cheese, the crisper and fruitier the wine should be when the rennet is added, curds are formed with Dutch courage dutch sandwich.",
       "resource_type": null,
+      "pre_reservation_message": null,
+      "post_reservation_message": null,
       "image": null
     },
     {
-      "id": "6c0231f9-9198-49ec-8aa0-cd793a38c4de",
-      "name": "Grated Alpine fb715ffe",
-      "slug": "grated-alpine-fb715ffe",
-      "description": "Separate the curds from the wey in an artisan farmerhouse cheese paring with wine bergkäse from the Alps - tongue in cheek blessed are the cheesemakers trying too hard, unsubtle, and inauthentic the whiter and fresher the cheese, the crisper and fruitier the wine should be bergkäse from the Alps the sticky nature of processed cheese can make it difficult to slice, but.",
+      "id": "23f7e664-b680-4910-a070-fa1b29266e8e",
+      "name": "Milky Goats 11de5da1",
+      "slug": "milky-goats-11de5da1",
+      "description": "The early bird may get the worm, but the second mouse gets the cheese in the trap but round cheeses are to be cut in wedges, like a cake is like chalk and cheese say cheese blessed are the cheesemakers blue fungi in cream they were so cheesed off dutch sandwich blend the flour, cheese and is like chalk and cheese.",
       "resource_type": null,
+      "pre_reservation_message": null,
+      "post_reservation_message": null,
       "image": null
     },
     {
-      "id": "7e229e78-7d2a-464d-812c-89edeb9f9613",
-      "name": "Dutch Goats 96d75408",
-      "slug": "dutch-goats-96d75408",
-      "description": "But poets have been mysteriously silent on the subject of cheese so cute but cheesy is like chalk and cheese bergkäse from the Alps 10 grilled cheese sandwiches you should try immediately with cut to size washed curd cheese of the Friesian herd - tongue in cheek raw milk is unpasteurized.",
+      "id": "2d10ace6-e249-4f02-a763-fe56a724ba88",
+      "name": "Nutty Brie fd583955",
+      "slug": "nutty-brie-fd583955",
+      "description": "The early bird may get the worm, but the second mouse gets the cheese in the trap bergkäse from the Alps when the rennet is added, curds are formed but round cheeses are to be cut in wedges, like a cake they can also age quite well in ripening cellars where blessed are the cheesemakers the whiter and fresher the cheese, the crisper and fruitier the wine should be soft ripening cheese for cheeseparing so cute but cheesy.",
       "resource_type": null,
+      "pre_reservation_message": null,
+      "post_reservation_message": null,
       "image": null
     }
   ],
@@ -1892,6 +1865,58 @@ Content-Length: 1627
 
 User profile and account information
 
+## Check Email
+
+
+### Request
+
+#### Endpoint
+
+```plaintext
+GET /api/users/check_email?email=darcie_senger%40nolan.ca
+Origin: http://barton-dibbert-and-zieme.mgrapp.com
+Host: example.org
+Cookie: 
+```
+
+`GET /api/users/check_email`
+
+#### Parameters
+
+
+```json
+email: darcie_senger@nolan.ca
+```
+
+
+| Name | Description |
+|:-----|:------------|
+| email *required* | Email |
+
+
+
+### Response
+
+```plaintext
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;c821f1244fd68b10cc644a392beaf4d8&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: d0d35aa2-0d46-4636-9e2d-e02516bfff07
+X-Runtime: 0.007655
+Content-Length: 34
+200 OK
+```
+
+
+```json
+{
+  "exists": true,
+  "phone_last4": null
+}
+```
+
+
+
 ## Get Session
 
 
@@ -1901,8 +1926,8 @@ User profile and account information
 
 ```plaintext
 GET /api/users/me
-Origin: http://hermann-lebsack.mgrapp.com
-Authorization: Bearer d28f8849-b3c2-4b41-b684-8073ba1b9b10
+Origin: http://becker-koelpin-and-ebert.mgrapp.com
+Authorization: Bearer 88144ab6-f17a-4bdb-8caf-662b816aaf20
 Host: example.org
 Cookie: 
 ```
@@ -1919,14 +1944,11 @@ None known.
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;7eb3e408157e9476fec50b13db5709bd&quot;
+ETag: W/&quot;7f01e73ca04534c594390a2a16f00198&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: f133b7b5-4690-4836-9ab5-a85d3dc09bc7
-X-Runtime: 0.009334
-Content-Length: 440
+X-Request-Id: 2172a9db-a752-4e0b-ba34-0d6a9242e2e4
+X-Runtime: 0.006883
+Content-Length: 536
 200 OK
 ```
 
@@ -1934,17 +1956,17 @@ Content-Length: 440
 ```json
 {
   "session": {
-    "id": "d28f8849-b3c2-4b41-b684-8073ba1b9b10",
-    "expires_at": "2019-01-13T17:52:17.784Z"
+    "id": "88144ab6-f17a-4bdb-8caf-662b816aaf20",
+    "expires_at": "2019-03-27T18:33:02.051Z"
   },
   "user": {
-    "id": "1537c475-2c57-4bbb-b971-200cc4d343ed",
+    "id": "7e243142-10e0-4dca-bf70-edb256680549",
     "account_balance": "0.0",
     "signed_waiver_at": null,
-    "created_at": "2018-12-30T17:52:17.779Z",
-    "email": "deeanna@zboncak.name",
-    "first_name": "Kacie",
-    "last_name": "Price",
+    "created_at": "2019-03-13T18:33:02.049Z",
+    "email": "tommie_abbott@mraz.biz",
+    "first_name": "Kristal",
+    "last_name": "Kris",
     "address1": null,
     "address2": null,
     "city": null,
@@ -1952,7 +1974,10 @@ Content-Length: 440
     "zip_code": null,
     "phone": null,
     "dob": null,
-    "member_start_date": "2018-12-30"
+    "member_start_date": "2019-03-13",
+    "password_reset_required": false,
+    "emergency_contact_name": null,
+    "emergency_contact_phone": null
   }
 }
 ```
@@ -1968,7 +1993,7 @@ Content-Length: 440
 
 ```plaintext
 POST /api/users
-Origin: http://jones-maggio.mgrapp.com
+Origin: http://kris-stoltenberg-and-hirthe.mgrapp.com
 Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Cookie: 
@@ -2005,14 +2030,11 @@ email=foo%40bar.com&password=password&first_name=Foo&last_name=Bar&address1=123+
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;e743200208bd9689e603eefcb451ec68&quot;
+ETag: W/&quot;43c104a51da88b457b4d67c4fc355bb6&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 6bf5b729-927a-4a07-a7aa-b19c96f894cf
-X-Runtime: 0.015769
-Content-Length: 458
+X-Request-Id: 38fc21f0-a219-4431-8dea-e36824569817
+X-Runtime: 0.030786
+Content-Length: 551
 201 Created
 ```
 
@@ -2020,14 +2042,14 @@ Content-Length: 458
 ```json
 {
   "session": {
-    "id": "b1624f74-c145-4806-be8e-61c76c36f111",
+    "id": "d60a270c-7aa1-456c-b5b2-af17518eada3",
     "expires_at": null
   },
   "user": {
-    "id": "73c3b9c9-4f78-4d66-ba98-57f81161869d",
+    "id": "903a709b-3920-43e6-b813-0aea69b47333",
     "account_balance": "0.0",
-    "signed_waiver_at": "2018-12-30T17:52:17.827Z",
-    "created_at": "2018-12-30T17:52:17.828Z",
+    "signed_waiver_at": "2019-03-13T18:33:02.085Z",
+    "created_at": "2019-03-13T18:33:02.093Z",
     "email": "foo@bar.com",
     "first_name": "Foo",
     "last_name": "Bar",
@@ -2038,8 +2060,190 @@ Content-Length: 458
     "zip_code": "54682",
     "phone": "7896365485",
     "dob": "1980-01-01",
-    "member_start_date": "2018-12-30"
+    "member_start_date": "2019-03-13",
+    "password_reset_required": false,
+    "emergency_contact_name": null,
+    "emergency_contact_phone": null
   }
+}
+```
+
+
+
+## Request Password Reset Token
+
+
+### Request
+
+#### Endpoint
+
+```plaintext
+POST /api/users/password_reset_token
+Origin: http://schuppe-denesik-and-johnston.mgrapp.com
+Host: example.org
+Content-Type: application/x-www-form-urlencoded
+Cookie: 
+```
+
+`POST /api/users/password_reset_token`
+
+#### Parameters
+
+
+```json
+email=neda%40stehr.com
+```
+
+
+| Name | Description |
+|:-----|:------------|
+| email *required* | Email |
+
+
+
+### Response
+
+```plaintext
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;44136fa355b3678a1146ad16f7e8649e&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 336030c8-1ed5-4d49-b70e-e41a28867aed
+X-Runtime: 0.010800
+Content-Length: 2
+200 OK
+```
+
+
+```json
+{
+}
+```
+
+
+
+## Reset Password
+
+
+### Request
+
+#### Endpoint
+
+```plaintext
+POST /api/users/db19993c-d6ed-4c4c-a151-bf5509e84d1f/reset_password
+Origin: http://mckenzie-group.mgrapp.com
+Host: example.org
+Content-Type: application/x-www-form-urlencoded
+Cookie: 
+```
+
+`POST /api/users/:user_id/reset_password`
+
+#### Parameters
+
+
+```json
+password=new-password&old_password=password
+```
+
+
+| Name | Description |
+|:-----|:------------|
+| password *required* | Password Reset Token |
+| old_password *required* | Password Reset Token |
+
+
+
+### Response
+
+```plaintext
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;8667df2de09d480ccbfe0d9a851d1896&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: f56ce367-b15c-4089-b99d-aceefdc0d4a5
+X-Runtime: 0.027060
+Content-Length: 521
+200 OK
+```
+
+
+```json
+{
+  "session": {
+    "id": "f139e9b9-9be9-4222-979e-2eaa9998d48f",
+    "expires_at": null
+  },
+  "user": {
+    "id": "db19993c-d6ed-4c4c-a151-bf5509e84d1f",
+    "account_balance": "0.0",
+    "signed_waiver_at": null,
+    "created_at": "2019-03-13T18:33:01.952Z",
+    "email": "hubert@lednermorissette.biz",
+    "first_name": "Reginald",
+    "last_name": "Hayes",
+    "address1": null,
+    "address2": null,
+    "city": null,
+    "state": null,
+    "zip_code": null,
+    "phone": null,
+    "dob": null,
+    "member_start_date": "2019-03-13",
+    "password_reset_required": false,
+    "emergency_contact_name": null,
+    "emergency_contact_phone": null
+  }
+}
+```
+
+
+
+## Send Email Verification Token
+
+
+### Request
+
+#### Endpoint
+
+```plaintext
+POST /api/users/send_email_verification_token
+Origin: http://klocko-kub-and-carter.mgrapp.com
+Host: example.org
+Content-Type: application/x-www-form-urlencoded
+Cookie: 
+```
+
+`POST /api/users/send_email_verification_token`
+
+#### Parameters
+
+
+```json
+email=lorriane%40heaney.biz&send_via=email
+```
+
+
+| Name | Description |
+|:-----|:------------|
+| email *required* | Email |
+| send_via *required* | Method to send by ("email" or "sms") |
+
+
+
+### Response
+
+```plaintext
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;44136fa355b3678a1146ad16f7e8649e&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 10d6700c-530d-4fa0-86cb-22454cf9b986
+X-Runtime: 0.029476
+Content-Length: 2
+200 OK
+```
+
+
+```json
+{
 }
 ```
 
@@ -2054,7 +2258,7 @@ Content-Length: 458
 
 ```plaintext
 POST /api/users/session
-Origin: http://dicki-llc.mgrapp.com
+Origin: http://hoppe-gutmann-and-hayes.mgrapp.com
 Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Cookie: 
@@ -2066,7 +2270,7 @@ Cookie:
 
 
 ```json
-email=layla%40leannon.co.uk&password=password
+email=setsuko%40ziemejast.biz&password=password
 ```
 
 
@@ -2081,14 +2285,11 @@ email=layla%40leannon.co.uk&password=password
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;d41e029fc89c900c3187baa7c30b4621&quot;
+ETag: W/&quot;c8e9c17705dcc027cb208fadfa15b4ca&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 5640653c-4963-4ef2-86d0-5f4ccaae9ec0
-X-Runtime: 0.009529
-Content-Length: 420
+X-Request-Id: a105eabc-a670-4798-9b09-a391d39cb6bb
+X-Runtime: 0.009841
+Content-Length: 514
 201 Created
 ```
 
@@ -2096,17 +2297,17 @@ Content-Length: 420
 ```json
 {
   "session": {
-    "id": "6d962514-654d-44ad-9b6f-468fcccf4ebb",
+    "id": "c7d5fa6f-b63d-4861-a513-d924664aa8e5",
     "expires_at": null
   },
   "user": {
-    "id": "3e2738c6-8a7e-4ce6-a785-58104aad0fea",
+    "id": "0de70fd0-b4cc-4923-8fb1-7a36cf3e1848",
     "account_balance": "0.0",
     "signed_waiver_at": null,
-    "created_at": "2018-12-30T17:52:17.844Z",
-    "email": "layla@leannon.co.uk",
-    "first_name": "Viki",
-    "last_name": "Rosenbaum",
+    "created_at": "2019-03-13T18:33:02.207Z",
+    "email": "setsuko@ziemejast.biz",
+    "first_name": "Nancey",
+    "last_name": "Harris",
     "address1": null,
     "address2": null,
     "city": null,
@@ -2114,7 +2315,10 @@ Content-Length: 420
     "zip_code": null,
     "phone": null,
     "dob": null,
-    "member_start_date": "2018-12-30"
+    "member_start_date": "2019-03-13",
+    "password_reset_required": false,
+    "emergency_contact_name": null,
+    "emergency_contact_phone": null
   }
 }
 ```
@@ -2130,8 +2334,8 @@ Content-Length: 420
 
 ```plaintext
 DELETE /api/users/session
-Origin: http://block-inc.mgrapp.com
-Authorization: Bearer ac905a19-1d12-4213-a501-9d3617371a9f
+Origin: http://kessler-paucek-and-schroeder.mgrapp.com
+Authorization: Bearer b59e00cf-61a1-4cb1-8e53-3a648748a05b
 Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Cookie: 
@@ -2149,15 +2353,82 @@ None known.
 
 ```plaintext
 Status: 200
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
 Cache-Control: no-cache
-X-Request-Id: fabd1440-b66f-4c0d-b0c0-72f8461ccda8
-X-Runtime: 0.006853
+X-Request-Id: 1d044149-6b68-4b55-b2ec-95362d26c19a
+X-Runtime: 0.006544
 204 No Content
 ```
 
+
+
+
+## Verify Password Reset Token
+
+
+### Request
+
+#### Endpoint
+
+```plaintext
+GET /api/users/password_reset_token?token=032f33dace4c6a25589ff3cde3604603
+Origin: http://schultz-will-and-kessler.mgrapp.com
+Host: example.org
+Cookie: 
+```
+
+`GET /api/users/password_reset_token`
+
+#### Parameters
+
+
+```json
+token: 032f33dace4c6a25589ff3cde3604603
+```
+
+
+| Name | Description |
+|:-----|:------------|
+| token *required* | Password Reset Token |
+
+
+
+### Response
+
+```plaintext
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;1c51ef8cc8b96ab62c879f389e3bacf3&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 8288a9a7-e7dc-40d2-90f8-e67517d46d97
+X-Runtime: 0.013323
+Content-Length: 440
+200 OK
+```
+
+
+```json
+{
+  "user": {
+    "id": "87cd5b08-c641-4ea1-ab83-2be0daa5dc08",
+    "account_balance": "0.0",
+    "signed_waiver_at": null,
+    "created_at": "2019-03-13T18:33:02.017Z",
+    "email": "bernie@russelmurazik.us",
+    "first_name": "Caryl",
+    "last_name": "Robel",
+    "address1": null,
+    "address2": null,
+    "city": null,
+    "state": null,
+    "zip_code": null,
+    "phone": null,
+    "dob": null,
+    "member_start_date": "2019-03-13",
+    "password_reset_required": false,
+    "emergency_contact_name": null,
+    "emergency_contact_phone": null
+  }
+}
+```
 
 
 
@@ -2174,8 +2445,8 @@ Used by a client to book classes
 
 ```plaintext
 GET /api/user_packages
-Origin: http://bauch-thompson-and-jast.mgrapp.com
-Authorization: Bearer b28b54a8-54e9-441d-8568-76b876934897
+Origin: http://hudson-douglas.mgrapp.com
+Authorization: Bearer f0abdc27-4ec1-48e6-801a-957fe7a4a15a
 Host: example.org
 Cookie: 
 ```
@@ -2201,14 +2472,11 @@ Cookie:
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET,PUT,POST,DELETE
-Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;8410db9785c4320ed3d0911c5b3d2314&quot;
+ETag: W/&quot;d4d1497bd958ab3b6493fe1d12ec7a6e&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 1f406245-f1a1-4885-941e-d6b8d8618a9b
-X-Runtime: 0.019424
-Content-Length: 2401
+X-Request-Id: 514b3032-1116-4804-8835-43873f4a7e79
+X-Runtime: 0.024382
+Content-Length: 2779
 200 OK
 ```
 
@@ -2217,32 +2485,33 @@ Content-Length: 2401
 {
   "packages": [
     {
-      "id": "fa4f282c-f60f-4248-8408-b4b0759f2bf1",
-      "name": "Subsync Tag Receiver",
+      "id": "26fb821a-2bed-45da-a773-d6b1a13616f0",
+      "name": "Cygpod Output System",
       "state": "active",
       "start_date": null,
       "end_date": null,
       "unlimited_sessions": true,
       "total_sessions": 1,
       "sessions_remaining": 1,
-      "created_at": "2018-12-30T17:52:18.562Z",
+      "created_at": "2019-03-13T18:33:01.699Z",
       "is_recurring": false,
       "shareable": false,
       "guests_allowed": true,
       "for_guest_only": false,
       "waitlist_priority": 1,
+      "advance_schedule_in_days": null,
       "recurrence_type": null,
       "recurrence_unit": null,
       "recurrence_period": null,
       "users": [
         {
-          "id": "a491601d-f065-4adb-b41b-3640efd6c92e",
+          "id": "3609f99d-8de3-4e77-ae40-d1982ecc0620",
           "account_balance": "0.0",
           "signed_waiver_at": null,
-          "created_at": "2018-12-30T17:52:18.525Z",
-          "email": "sana@leannon.com",
-          "first_name": "Tempie",
-          "last_name": "Dickinson",
+          "created_at": "2019-03-13T18:33:01.663Z",
+          "email": "toby@cronin.co.uk",
+          "first_name": "Lamont",
+          "last_name": "Spinka",
           "address1": null,
           "address2": null,
           "city": null,
@@ -2250,37 +2519,41 @@ Content-Length: 2401
           "zip_code": null,
           "phone": null,
           "dob": null,
-          "member_start_date": "2018-12-30"
+          "member_start_date": "2019-03-13",
+          "password_reset_required": false,
+          "emergency_contact_name": null,
+          "emergency_contact_phone": null
         }
       ]
     },
     {
-      "id": "84eab1e4-ff29-4162-8541-b025b5241fd2",
-      "name": "TAB Remote Gel Adapter",
+      "id": "548e4db3-9a78-46ad-847c-653b051b970b",
+      "name": "Phostfunc Electric Output Filter",
       "state": "active",
       "start_date": null,
       "end_date": null,
       "unlimited_sessions": true,
       "total_sessions": 1,
       "sessions_remaining": 1,
-      "created_at": "2018-12-30T17:52:18.557Z",
+      "created_at": "2019-03-13T18:33:01.693Z",
       "is_recurring": false,
       "shareable": false,
       "guests_allowed": true,
       "for_guest_only": false,
       "waitlist_priority": 1,
+      "advance_schedule_in_days": null,
       "recurrence_type": null,
       "recurrence_unit": null,
       "recurrence_period": null,
       "users": [
         {
-          "id": "a491601d-f065-4adb-b41b-3640efd6c92e",
+          "id": "3609f99d-8de3-4e77-ae40-d1982ecc0620",
           "account_balance": "0.0",
           "signed_waiver_at": null,
-          "created_at": "2018-12-30T17:52:18.525Z",
-          "email": "sana@leannon.com",
-          "first_name": "Tempie",
-          "last_name": "Dickinson",
+          "created_at": "2019-03-13T18:33:01.663Z",
+          "email": "toby@cronin.co.uk",
+          "first_name": "Lamont",
+          "last_name": "Spinka",
           "address1": null,
           "address2": null,
           "city": null,
@@ -2288,37 +2561,41 @@ Content-Length: 2401
           "zip_code": null,
           "phone": null,
           "dob": null,
-          "member_start_date": "2018-12-30"
+          "member_start_date": "2019-03-13",
+          "password_reset_required": false,
+          "emergency_contact_name": null,
+          "emergency_contact_phone": null
         }
       ]
     },
     {
-      "id": "832eade7-b460-46a2-9a02-e82a63582ee8",
-      "name": "Pientfunc Gel Adapter",
+      "id": "f358e3d3-740d-49d4-91bc-813487a8bff1",
+      "name": "Brunsfunc GPS Viewer",
       "state": "active",
       "start_date": null,
       "end_date": null,
       "unlimited_sessions": true,
       "total_sessions": 1,
       "sessions_remaining": 1,
-      "created_at": "2018-12-30T17:52:18.551Z",
+      "created_at": "2019-03-13T18:33:01.687Z",
       "is_recurring": false,
       "shareable": false,
       "guests_allowed": true,
       "for_guest_only": false,
       "waitlist_priority": 1,
+      "advance_schedule_in_days": null,
       "recurrence_type": null,
       "recurrence_unit": null,
       "recurrence_period": null,
       "users": [
         {
-          "id": "a491601d-f065-4adb-b41b-3640efd6c92e",
+          "id": "3609f99d-8de3-4e77-ae40-d1982ecc0620",
           "account_balance": "0.0",
           "signed_waiver_at": null,
-          "created_at": "2018-12-30T17:52:18.525Z",
-          "email": "sana@leannon.com",
-          "first_name": "Tempie",
-          "last_name": "Dickinson",
+          "created_at": "2019-03-13T18:33:01.663Z",
+          "email": "toby@cronin.co.uk",
+          "first_name": "Lamont",
+          "last_name": "Spinka",
           "address1": null,
           "address2": null,
           "city": null,
@@ -2326,7 +2603,10 @@ Content-Length: 2401
           "zip_code": null,
           "phone": null,
           "dob": null,
-          "member_start_date": "2018-12-30"
+          "member_start_date": "2019-03-13",
+          "password_reset_required": false,
+          "emergency_contact_name": null,
+          "emergency_contact_phone": null
         }
       ]
     }
@@ -2357,8 +2637,8 @@ Record of user debits, credits, account balance adjustments, etc. Basically anyt
 
 ```plaintext
 GET /api/transactions
-Origin: http://reilly-inc.mgrapp.com
-Authorization: Bearer 00e43a41-c4df-49d8-b321-4d6fed034ea8
+Origin: http://bernhard-rodriguez.mgrapp.com
+Authorization: Bearer ad37cb58-6dfd-4315-bce9-5d88019e7f1a
 Host: example.org
 Cookie: 
 ```
@@ -2382,14 +2662,15 @@ Cookie:
 
 ```plaintext
 Content-Type: application/json; charset=utf-8
-Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: http://bernhard-rodriguez.mgrapp.com
 Access-Control-Allow-Methods: GET,PUT,POST,DELETE
 Access-Control-Allow-Headers: Authorization,Content-Type
-ETag: W/&quot;fa3214aa452aa4cac7f9a6e3b4c4182f&quot;
+Vary: Origin
+ETag: W/&quot;5bf38f34531d2c865be26956165ac621&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 5715cc4f-cd74-45f1-9316-b826a5a8be95
-X-Runtime: 0.011528
-Content-Length: 2605
+X-Request-Id: 35d88ce2-0b4a-447b-850c-c4801877972b
+X-Runtime: 0.115502
+Content-Length: 2604
 200 OK
 ```
 
@@ -2398,10 +2679,10 @@ Content-Length: 2605
 {
   "transactions": [
     {
-      "id": "0a597d25-5821-4d96-9577-9faa2a7ecf62",
-      "created_at": "2018-12-30T17:52:18.634Z",
+      "id": "ef02036b-9863-4b2c-b76b-cb33cb5d8891",
+      "created_at": "2019-03-13T18:33:00.785Z",
       "state": "pending_capture",
-      "amount": "15.0",
+      "amount": "60.0",
       "fail_message": null,
       "process_after": null,
       "processed_at": null,
@@ -2424,10 +2705,10 @@ Content-Length: 2605
       "creator": null
     },
     {
-      "id": "ce629d3f-2562-44aa-a769-b4d4df1ff72b",
-      "created_at": "2018-12-30T17:52:18.632Z",
+      "id": "32aea3dc-bff0-41ce-97d9-c80467e08007",
+      "created_at": "2019-03-13T18:33:00.783Z",
       "state": "pending_capture",
-      "amount": "21.0",
+      "amount": "12.0",
       "fail_message": null,
       "process_after": null,
       "processed_at": null,
@@ -2450,10 +2731,10 @@ Content-Length: 2605
       "creator": null
     },
     {
-      "id": "e3e65688-18f1-4310-bf60-bea5c6c89be7",
-      "created_at": "2018-12-30T17:52:18.630Z",
+      "id": "3dadc069-a110-417a-be05-8665a14894e2",
+      "created_at": "2019-03-13T18:33:00.781Z",
       "state": "pending_capture",
-      "amount": "39.0",
+      "amount": "7.0",
       "fail_message": null,
       "process_after": null,
       "processed_at": null,
@@ -2476,10 +2757,10 @@ Content-Length: 2605
       "creator": null
     },
     {
-      "id": "01fd416a-1b4f-4045-8788-ffba57dceb60",
-      "created_at": "2018-12-30T17:52:18.628Z",
+      "id": "9657ab09-6ef0-4db4-828e-19b50dc52c99",
+      "created_at": "2019-03-13T18:33:00.779Z",
       "state": "pending_capture",
-      "amount": "71.0",
+      "amount": "58.0",
       "fail_message": null,
       "process_after": null,
       "processed_at": null,
@@ -2502,10 +2783,10 @@ Content-Length: 2605
       "creator": null
     },
     {
-      "id": "cfd327df-5fa2-4105-8263-beaa34379e7b",
-      "created_at": "2018-12-30T17:52:18.626Z",
+      "id": "f8da4c94-2760-4e7d-8aa3-a37ef846e656",
+      "created_at": "2019-03-13T18:33:00.775Z",
       "state": "pending_capture",
-      "amount": "36.0",
+      "amount": "50.0",
       "fail_message": null,
       "process_after": null,
       "processed_at": null,
